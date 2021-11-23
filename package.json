@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "prepare": "husky install",
+    "yarn": "yarn install --frozen-lockfile"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./tools/is_main_branch.sh",
+      "pre-push": "./tools/is_main_branch.sh"
+    }
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "sass-lint": "^1.13.1"
+  }
+}
